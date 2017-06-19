@@ -1,0 +1,22 @@
+
+<div class="container">
+    <div class="row">
+      <div class="col 14 s12">
+        <h3>Open</h3>
+        <% @open.each do |task| %><%= render @open %><% end %>
+      </div>
+
+    <div class="col 14 s12">
+      <h3>WIP</h3>
+      <% @wip.each do |task| %><%= render @wip %><% end %>
+    </div>
+    <div class="col 14 s12">
+      <h3>Closed</h3>
+      <% @closed.each do |task| %><%= render @closed %><% end %>
+    </div>
+    </div>
+    <div class="row">
+        <%= link_to "<i class='fa fa-plus' aria-hidden='true'></i>".html_safe, new_task_path, class: "btn-floating btn-large blue" %>
+    </div>
+
+</div>
